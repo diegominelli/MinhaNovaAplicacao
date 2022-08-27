@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:minhanovaaplicacao/components/user_tile.dart';
 import 'package:minhanovaaplicacao/provider/user.dart';
+import 'package:minhanovaaplicacao/routes/app_routes.dart';
 import 'package:provider/provider.dart';
 
 class UserList extends StatelessWidget {
@@ -14,7 +15,9 @@ class UserList extends StatelessWidget {
         title: const Text("Lista de usuários"),
         actions: <Widget>[
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.of(context).pushNamed(AppRoutes.USER_FORM);
+            },
             icon: const Icon(Icons.add),
           ),
         ],
